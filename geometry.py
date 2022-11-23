@@ -1,23 +1,37 @@
 # area and perimeter for shapes
 import math
 
+
 class Circle:
-    def area(self,r):
-        return math.pi*(r**2)
+    def __init__(self, radius):
+        self.radius = radius
 
-    def perimeter(self,r):
-        return 2*r*math.pi
+    def area(self):
+        return math.pi*(self.radius**2)
 
-class Rectangle:
-    def area(self,w,h):
-        return w*h
+    def perimeter(self):
+        return 2*self.radius*math.pi
 
-    def perimeter(self,w,h):
-        return 2*(w+h)
 
 class Triangle:
-    def area(self,b,h):
-        return 0.5*b*h
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
 
-    def perimeter(self,b,h):
-        return b+h
+    def area(self):
+        return 0.5*self.base*self.height
+
+    def perimeter(self):
+        return self.base+self.height
+
+
+class Rectangle:
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width*self.height
+
+    def perimeter(self):
+        return 2*(self.width+self.height)
