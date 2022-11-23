@@ -60,3 +60,17 @@ class Rectangle(implements(ShapeInterface)):
     def perimeter(self):
         """todo"""
         return 2*(self.width+self.height)
+
+class Square(implements(ShapeInterface)):
+    """todo"""
+    def __init__(self, side):
+        self.width = side
+        self.height = side
+
+    def area(self):
+        """todo"""
+        return self.width*self.height
+
+    def perimeter(self):
+        """todo"""
+        return 2*(self.width+self.height)
